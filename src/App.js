@@ -29,18 +29,38 @@ function App() {
 
   const randomValues = () => {
     showAnswer && setShowAnswer(false);
-    setBottomNum(Math.floor(Math.random() * 13));
-    setTopNum(Math.floor(Math.random() * 13));
+    setBottomNum(Math.floor(Math.random() * (numList.length + 1)));
+    setTopNum(Math.floor(Math.random() * (numList.length + 1)));
   };
 
   const handleNext = () => {
     showAnswer && setShowAnswer(false);
-    bottomNum <= 11 ? setBottomNum((prev) => prev + 1) : setBottomNum(0);
+    bottomNum <= numList.length - 1 && setBottomNum((prev) => prev + 1);
+    if (bottomNum === numList.length) {
+      setBottomNum(0);
+      setTopNum((prev) => {
+        if (prev <= numList.length - 1) {
+          return prev + 1;
+        } else {
+          return 0;
+        }
+      });
+    }
   };
 
   const handleBack = () => {
     showAnswer && setShowAnswer(false);
-    bottomNum >= 1 ? setBottomNum((prev) => prev - 1) : setBottomNum(12);
+    bottomNum >= 1 && setBottomNum((prev) => prev - 1);
+    if (bottomNum === 0) {
+      setBottomNum(numList.length);
+      setTopNum((prev) => {
+        if (prev > 0) {
+          return prev - 1;
+        } else {
+          return numList.length;
+        }
+      });
+    }
   };
 
   return (
