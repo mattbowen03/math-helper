@@ -6,9 +6,6 @@ body > #root > div {
   height: 100vh;
 }
 
-.App {
-  padding-top: 16px;
-}
 
 .logo {
   text-align: center;
@@ -16,11 +13,10 @@ body > #root > div {
 }
 
 .title {
-  margin: 0 auto 10px;
+  margin: 0 0 10px;
   background-color: whitesmoke;
-  max-width: 400px;
   border-radius: 4px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .3);
   padding: 4px;
 }
 
@@ -33,7 +29,7 @@ body > #root > div {
   justify-content: center;
   padding: 10px;
   border-radius: 4px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .3);
 }
 
 .main-left,
@@ -56,7 +52,7 @@ body > #root > div {
   background-color: lightskyblue;
   width: 100%;
   border-radius: 4px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .3);
   padding: 10px;
   margin-bottom: 10px;
 }
